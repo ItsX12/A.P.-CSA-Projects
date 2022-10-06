@@ -1,0 +1,15 @@
+import java.util.*;
+import java.lang.*;
+public class Interest
+{
+    public static void main(String[] args){
+        System.out.println("Monthly Interest Rate: ");
+        Scanner input = new Scanner(System.in);
+        double MR = input.nextDouble();
+        input.close();
+        double AR = MR*12;
+        double EAR = Math.pow(MR+1,12) - 1;
+        System.out.println("Stated Yearly Rate: " + AR);
+        System.out.println("Effective Yearly Rate: " + EAR);
+    }
+}
