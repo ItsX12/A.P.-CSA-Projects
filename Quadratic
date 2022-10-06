@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+public class Quadratic
+{
+    public static void main(){
+        System.out.println("Enter the values of A, B, and C values of a quadratic in standard form.\n");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter A: ");
+        double A = input.nextDouble();
+        System.out.println("Enter B: ");
+        double B = input.nextDouble();
+        System.out.println("Enter C: ");
+        double C = input.nextDouble();
+        input.close();
+        double positive = ((-1 * B) + (Math.sqrt(B * B - 4 * A * C))) / (2 * A);
+        double negative = ((-1 * B) - (Math.sqrt(B * B - 4 * A * C))) / (2 * A);
+        System.out.println("The values of X are: " + positive + " and " + negative + ".");
+    }
+}
