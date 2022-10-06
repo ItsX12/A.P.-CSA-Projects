@@ -1,0 +1,18 @@
+import java.lang.*;
+import java.util.*;
+public class PythagoreanTheorem{
+public static void main(){
+    //Takes input to obtain first two angle measures from the user from the user
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter A: ");
+    double a = input.nextDouble();
+    double A = Math.sqrt(a);
+    System.out.print("Enter B: ");
+    double b = input.nextDouble();
+    double B = Math.sqrt(b);
+    input.close();
+    //Calculates the the final remaining angle in the triangle
+    double FinalC = (A+B);
+    System.out.println("The Hypotenuse Is: "+ FinalC);
+    }
+}
