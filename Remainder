@@ -1,0 +1,15 @@
+import java.util.*;
+public class Rem
+{
+    public static void main(){
+        System.out.println("Please enter a number of days: ");
+        //Initializes Scanner
+        Scanner input = new Scanner(System.in);
+        //Takes Input
+        long totalDays = input.nextLong();
+        //Finds Remainder
+        System.out.println("\nConverting into weeks with leftover days...\n");
+        System.out.println("Weeks: " + totalDays/7);
+        System.out.println("Left over days: " + totalDays%7);
+    }
+}
