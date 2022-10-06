@@ -1,0 +1,31 @@
+import java.util.*;
+public class ThirdAngleCalculator{
+public static void main(){
+    //Takes input to obtain first two angle measures from the user from the user
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter Angle Measurement 1: ");
+    double A1 = input.nextDouble();
+    //Check for Angle 1
+    if (A1 >= 180){
+        System.out.println("Invalid input");
+        System.exit(0);
+    }
+    System.out.print("Enter Angle Measurement 2: ");
+    double A2 = input.nextDouble();
+    input.close();
+    //Check for Angle 2
+    if (A2 >= 180){
+        System.out.println("Invalid input");
+        System.exit(0);
+    }
+    //Check A1 + A2 does not exceed 180
+    double check = A1 + A2;
+    if (check >= 180){
+        System.out.println("Invalid input");
+        System.exit(0);
+    }
+    //Calculates the the final remaining angle in the triangle
+    double LastAngle = (180 - A1 - A2);
+    System.out.println("The Third Angle Is: "+ LastAngle);
+    }
+}
