@@ -1,0 +1,23 @@
+import java.util.*;
+import java.lang.*;
+public class Cosines
+{
+    public static void main(){
+        System.out.println("This program finds the value of the third side of a triangle using two sides and an angle.\n"); 
+        System.out.println("Enter side 1 (a) :");
+        Scanner input = new Scanner(System.in);
+        double a = input.nextDouble();
+        System.out.println("Enter side 2 (b) :");
+        double b = input.nextDouble();
+        System.out.println("Enter the angle where the two sides intersect (C) :");
+        double C = input.nextDouble();
+        input.close();
+        if (C >= 180){
+        System.out.println("Invalid input");
+        System.exit(0);
+        }
+        double cSquared = (a*a)+(b*b)-((2*a*b)*(Math.cos(C)));
+        double c = Math.sqrt(cSquared);
+        System.out.println("The value of c is: " + c);
+    }
+}
