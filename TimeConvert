@@ -1,0 +1,27 @@
+import java.util.*;
+public class DaysHoursSeconds
+{
+    public static void main(){
+        //Takes Input
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter a number of seconds: ");
+        long totalSeconds = input.nextLong();
+        input.close();
+        //Calculates each of the values based on the number of seconds using remainders for the next value
+        long years = totalSeconds/31557600;
+        long yearsRemainder =  totalSeconds%31557600;
+        long months = yearsRemainder/2629800;
+        long monthsRemainder = yearsRemainder%2629800;
+        long weeks = monthsRemainder/604800;
+        long weeksRemainder = monthsRemainder%604800;
+        long days = weeksRemainder/86400;
+        long daysRemainder = weeksRemainder%86400;
+        long hours = daysRemainder/3600;
+        long hoursRemainder = daysRemainder%3600;
+        long minutes = hoursRemainder/60;
+        long minutesRemainder = hoursRemainder%60;
+        //Prints how much the seconds equal in years, months, weeks, days, hours, minutes, seconds
+        System.out.println(totalSeconds + " seconds equals " + years + " years, " + months + " months, " + weeks + " weeks, " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + minutesRemainder + " seconds.");
+        
+    }
+}
