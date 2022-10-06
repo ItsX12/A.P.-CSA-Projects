@@ -1,0 +1,47 @@
+import java.util.*;
+public class GuessWho{
+    public static void main(String[] args){
+        System.out.println("Is this person a Junior? Yes or No: ");
+        Scanner input = new Scanner(System.in);
+        String junior = input.nextLine();
+        if (junior.equalsIgnoreCase("no")){
+            System.out.println("It is John.");
+            System.exit(0);
+        }
+        System.out.println("Does this person have a 6 or 7 letter last name? Yes or No: ");
+        String name = input.nextLine();
+        System.out.println("Does this person like pineapple on pizza? Yes or No: ");
+        String pineapple = input.nextLine();
+        System.out.println("Has this person taken a CS class before? Yes or No: ");
+        String computerClass = input.nextLine();
+        System.out.println("Does this person have a younger sibling? Yes or No: ");
+        String sibling = input.nextLine();
+        if (sibling.equalsIgnoreCase("yes")){
+            System.out.println("It is Bob.");
+            System.exit(0);
+        }
+        System.out.println("Does this person have a birthday in the first half of the year? Yes or No: ");
+        String birthday = input.nextLine();
+        input.close();
+        if (junior.equalsIgnoreCase("yes") && name.equalsIgnoreCase("no") && pineapple.equalsIgnoreCase("yes") && computerClass.equalsIgnoreCase("yes") && sibling.equalsIgnoreCase("no") && birthday.equalsIgnoreCase("no")){
+            System.out.println("It is Wayne.");
+        }
+        else if (junior.equalsIgnoreCase("yes") && name.equalsIgnoreCase("no")&& pineapple.equalsIgnoreCase("no") && computerClass.equalsIgnoreCase("no") && sibling.equalsIgnoreCase("no") && birthday.equalsIgnoreCase("no")){
+            System.out.println("It is Max.");
+        }
+        else if (junior.equalsIgnoreCase("yes") && name.equalsIgnoreCase("yes")&& pineapple.equalsIgnoreCase("no") && computerClass.equalsIgnoreCase("yes") && sibling.equalsIgnoreCase("no") && birthday.equalsIgnoreCase("yes")){
+            System.out.println("It is Joe.");
+        }
+        else if (junior.equalsIgnoreCase("yes") && name.equalsIgnoreCase("yes") && pineapple.equalsIgnoreCase("yes") && computerClass.equalsIgnoreCase("no") && sibling.equalsIgnoreCase("no") && birthday.equalsIgnoreCase("yes")){
+            System.out.println("It is George.");
+        }
+        else if (junior.equalsIgnoreCase("yes") && name.equalsIgnoreCase("no") && pineapple.equalsIgnoreCase("yes") && computerClass.equalsIgnoreCase("no") && sibling.equalsIgnoreCase("no") && birthday.equalsIgnoreCase("no")){
+            System.out.println("It is James.");
+        }
+        else{
+            System.out.println("I can't figure out who you are! Have a nice day!");
+            System.exit(0);
+        }
+        System.exit(0);
+    }
+}
