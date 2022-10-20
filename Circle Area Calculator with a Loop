@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class CircleAreaCalculator4
+{
+    public static void main()
+    {
+        Scanner scan = new Scanner(System.in);
+        int diameter = 0;
+        while(diameter >= 0)
+        {
+            System.out.println("If you input a diameter length, I will tell you the area of the corresponding circle. To quit, enter a negative diameter.");
+            diameter = scan.nextInt();
+            if(diameter >= 0)
+            {
+                double radius = ((double)diameter)/2;
+                double area = Math.PI*Math.pow(radius,2);
+                System.out.println("Hold on...this may take me a second...or 10");
+                int count = 100000;
+                while (count > 0)
+                {
+                    count = count - 1;
+                }            
+                System.out.println("The area is " + area + " units squared.");
+            }
+        }
+
+    }
+}
