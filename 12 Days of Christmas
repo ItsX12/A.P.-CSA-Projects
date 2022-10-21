@@ -1,0 +1,15 @@
+public class Christmas
+{
+    public static void main(String[] args){
+        System.out.println("Below are how many gifts were given on each day of the 12 days of Christmas.");
+        int count = 0;
+        int gifts = 1;
+        int totalGifts = 0;
+        while(count < 12){
+            count = count+1;
+            gifts = (count*count + count)/2;
+            totalGifts = gifts + totalGifts;
+            System.out.println("On the " + count + " day of Christmas, my true love sent to me " + gifts + " gift(s) which meant I had " + totalGifts + " total gift(s).");
+        }
+    }
+}
