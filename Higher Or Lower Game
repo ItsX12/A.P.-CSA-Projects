@@ -1,0 +1,21 @@
+import java.util.*;
+public class HigherOrLower {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        long input = 1001;
+        long count = 0;
+        long number = (int) (Math.random() * ((1000 - 1) + 1)) + 1;
+        System.out.println("Please enter a number between 1 and 1000 and I will tell you if you need to guess higher or lower.");
+        while (input - number != 0) {
+            count = count + 1;
+            input = scan.nextLong();
+            if (input - number > 0) {
+                System.out.println("Number is Lower. Keep guessing.");
+            } else if (input - number < 0) {
+                System.out.println("Number is Higher. Keep guessing.");
+            } else if (input - number == 0) {
+                System.out.println("You have found the number in " + count + " guess(es)!");
+            }
+        }
+    }
+}
