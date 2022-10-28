@@ -1,0 +1,35 @@
+import java.util.*;
+/**
+ * This program takes input from the user to determine how to fix a lamp.
+ *
+ * @author Andrew Grivner
+ * @version 1.0
+ */
+public class Lamp
+{
+    public static void main(String[] args){
+        System.out.println("Does the lamp work? Yes or No?");
+        Scanner input = new Scanner(System.in);
+        String answer = input.nextLine();
+        if (!answer.equalsIgnoreCase("yes")){
+            System.out.println("Is the lamp plugged in?");
+            answer = input.nextLine();
+            if (!answer.equalsIgnoreCase("yes")){
+                System.out.println("Plug in your lamp.");
+            }
+            else{
+                System.out.println("Is the bulb burned out?");
+                answer = input.nextLine();
+                if (!answer.equalsIgnoreCase("no")){
+                    System.out.println("Please replace the bulb.");
+                }
+                else{
+                    System.out.println("Please get your lamp repaired.");
+                }
+            }
+        }
+        else{
+            System.out.println("Your lamp isn't broken!");
+        }
+    }
+}
