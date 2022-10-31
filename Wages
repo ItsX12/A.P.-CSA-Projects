@@ -1,0 +1,29 @@
+import java.util.*;
+public class Wage
+{
+    public static void main(String[] args){
+        System.out.println("Enter the number of hours the employee worked: ");
+        Scanner scan = new Scanner(System.in);
+        double hours = scan.nextLong();
+        System.out.println("Enter how many dollars the employee made in sales: ");
+        double dollars = scan.nextLong();
+        if (dollars >= 1 && dollars <= 99.99){
+            dollars = dollars * 0.05;
+        }
+        if (dollars >= 100 && dollars <= 299.99){
+            dollars = dollars * 0.1;
+        }
+        if (dollars >= 300){
+            dollars = dollars * 0.15;
+        }
+        long sales = (long) (Math.random() * 100 + 1);
+        if (hours > 40){
+            hours = (Math.round((((hours - 40) * 1.5) + 40)) * 100);
+            hours = hours/100;
+        }
+        double rate = hours * 7.25 * 100;
+        rate = Math.round(rate);
+        rate = rate/100 + dollars;
+        System.out.println("Employee should be paid $" + rate);
+    }
+}
