@@ -1,0 +1,34 @@
+import java.util.*;
+public class Bingo
+{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        String terminate = "";
+        String stop = "Yes";
+        while(stop.equalsIgnoreCase("Yes")){
+            terminate = "";
+            while (!terminate.equalsIgnoreCase("Yes")){
+                int BingoNum = (int)(Math.random() * ((75 - 1) + 1)) + 1;
+                if (BingoNum <= 15){
+                    System.out.println("B " + BingoNum);
+                }
+                else if (BingoNum <= 30){
+                    System.out.println("I " + BingoNum);
+                }
+                else if (BingoNum <= 45){
+                    System.out.println("N " + BingoNum);  
+                }
+                else if (BingoNum <= 60){
+                    System.out.println("G " + BingoNum);
+                }
+                else if (BingoNum <= 75){
+                    System.out.println("O " + BingoNum);
+                }
+                System.out.println("Did you get a bingo? Yes or No.");
+                terminate = input.nextLine();
+            }
+            System.out.println("Play Again? Yes or No.");
+            stop = input.nextLine();
+        }
+    }
+}
