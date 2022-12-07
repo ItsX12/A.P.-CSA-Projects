@@ -1,0 +1,28 @@
+import java.util.*;
+public class NumberAdder
+{
+    public static void main(String[] args){
+        System.out.println("This program will print out all numbers in a desired range that add up to a desired amount.\n");
+        System.out.println("Please enter a number: ");
+        Scanner input = new Scanner(System.in);
+        long range = input.nextLong();
+        System.out.println("Please enter the amount you want the digits to add up to: ");
+        long addAmount = input.nextLong();
+        long currentDigit = 0;
+        long num = 0;
+        long sum = 0;
+        System.out.print("The number(s) that fit(s) the requirements are: ");
+        for(int i=1; i <= range; i++){
+            num = i;
+            while (num > 0){
+                currentDigit = num%10;
+                sum = currentDigit + sum;
+                num = num/10;
+            }
+            if(addAmount == sum){
+                System.out.print(i + " ");
+            }
+            sum = 0;
+        }
+    }
+}
