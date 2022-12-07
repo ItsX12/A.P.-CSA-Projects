@@ -1,0 +1,22 @@
+import java.util.*;
+public class PrimeNumber
+{
+    public static void main(String[] args){
+        System.out.println("Enter an integer above 2 and all prime numbers between 2 and that number will be printed.");
+        System.out.println("\nEnter a number: ");
+        Scanner input = new Scanner(System.in);
+        int range = input.nextInt();
+        System.out.print("\nPrime numbers in the range from 2 to " + range + " are: ");
+        for(int i=2; i <= range; i++){
+            boolean isPrime = true;
+            for(int j=2; j < i; j++){
+                if(i%j == 0){
+                    isPrime = false;
+                }
+            }
+            if(isPrime == true){
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
