@@ -1,0 +1,264 @@
+import java.util.*;
+/**
+ * Write a description of class Coder here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class Coder
+{
+    public static void main(String[] args){
+        System.out.println("Do you want to code or decode? ");
+        Scanner input = new Scanner(System.in);
+        String answer = input.nextLine();
+        int i = 0;
+        String words = "";
+        System.out.println("Enter message: ");
+        if(answer.equalsIgnoreCase("code") || answer.equalsIgnoreCase("coding")){
+            words = input.nextLine();
+            for (i = 0; i < words.length(); i++) {
+                if (words.substring(i, i + 1).equalsIgnoreCase("0")){
+                    words = words.substring(0, i) + "0-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("1")){
+                    words = words.substring(0, i) + "1-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("2")){
+                    words = words.substring(0, i) + "2-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("3")){
+                    words = words.substring(0, i) + "3-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("4")){
+                    words = words.substring(0, i) + "4-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("5")){
+                    words = words.substring(0, i) + "5-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("6")){
+                    words = words.substring(0, i) + "6-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("7")){
+                    words = words.substring(0, i) + "7-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("8")){
+                    words = words.substring(0, i) + "8-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("9")){
+                    words = words.substring(0, i) + "9-" + words.substring(i + 1);
+                }
+            }
+            for (i = 0; i < words.length(); i++) {
+                if (words.substring(i, i + 1).equalsIgnoreCase("a")){
+                    words = words.substring(0, i) + "10-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("b")){
+                    words = words.substring(0, i) + "11-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("c")){
+                    words = words.substring(0, i) + "12-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("d")){
+                    words = words.substring(0, i) + "13-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("e")){
+                    words = words.substring(0, i) + "14-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("f")){
+                    words = words.substring(0, i) + "15-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("g")){
+                    words = words.substring(0, i) + "16-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("h")){
+                    words = words.substring(0, i) + "17-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("i")){
+                    words = words.substring(0, i) + "18-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("j")){
+                    words = words.substring(0, i) + "19-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("k")){
+                    words = words.substring(0, i) + "20-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("l")){
+                    words = words.substring(0, i) + "21-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("m")){
+                    words = words.substring(0, i) + "22-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("n")){
+                    words = words.substring(0, i) + "23-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("o")){
+                    words = words.substring(0, i) + "24-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("p")){
+                    words = words.substring(0, i) + "25-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("q")){
+                    words = words.substring(0, i) + "26-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("r")){
+                    words = words.substring(0, i) + "27-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("s")){
+                    words = words.substring(0, i) + "28-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("t")){
+                    words = words.substring(0, i) + "29-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("u")){
+                    words = words.substring(0, i) + "30-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("v")){
+                    words = words.substring(0, i) + "31-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("w")){
+                    words = words.substring(0, i) + "32-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("x")){
+                    words = words.substring(0, i) + "33-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("y")){
+                    words = words.substring(0, i) + "34-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("z")){
+                    words = words.substring(0, i) + "35-" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase(" ")){
+                    words = words.substring(0, i) + "|-" + words.substring(i + 1);
+                }
+            }
+            System.out.println("[-"+ words +"]");
+        }
+        else{
+            words = input.nextLine();
+            for (i = 0; i < words.length(); i++) {
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("[-")){
+                    words = words.substring(0, i) + "" + words.substring(i + 2);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("]")){
+                    words = words.substring(0, i) + "" + words.substring(i + 1);
+                }
+            }
+            for (i = 0; i < words.length(); i++) {
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("10-")){
+                    words = words.substring(0, i) + "a" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("11-")){
+                    words = words.substring(0, i) + "b" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("12-")){
+                    words = words.substring(0, i) + "c" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("13-")){
+                    words = words.substring(0, i) + "d" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("14-")){
+                    words = words.substring(0, i) + "e" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("15-")){
+                    words = words.substring(0, i) + "f" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("16-")){
+                    words = words.substring(0, i) + "g" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("17-")){
+                    words = words.substring(0, i) + "h" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("18-")){
+                    words = words.substring(0, i) + "i" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("19-")){
+                    words = words.substring(0, i) + "j" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("20-")){
+                    words = words.substring(0, i) + "k-" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("21-")){
+                    words = words.substring(0, i) + "l" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("22-")){
+                    words = words.substring(0, i) + "m" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("23-")){
+                    words = words.substring(0, i) + "n" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("24-")){
+                    words = words.substring(0, i) + "o" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("25-")){
+                    words = words.substring(0, i) + "p" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("26-")){
+                    words = words.substring(0, i) + "q" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("27-")){
+                    words = words.substring(0, i) + "r" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("28-")){
+                    words = words.substring(0, i) + "s" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("29-")){
+                    words = words.substring(0, i) + "t" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("30-")){
+                    words = words.substring(0, i) + "u" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("31-")){
+                    words = words.substring(0, i) + "v" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("32-")){
+                    words = words.substring(0, i) + "w" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("33-")){
+                    words = words.substring(0, i) + "x" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("34-")){
+                    words = words.substring(0, i) + "y" + words.substring(i + 3);
+                }
+                if (i+3 <= words.length() && words.substring(i, i + 3).equalsIgnoreCase("35-")){
+                    words = words.substring(0, i) + "z" + words.substring(i + 3);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("|-")){
+                    words = words.substring(0, i) + " " + words.substring(i + 2);
+                }
+            }
+            for (i = 0; i < words.length(); i++) {
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("0-")){
+                    words = words.substring(0, i) + "0" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("1-")){
+                    words = words.substring(0, i) + "1" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("2-")){
+                    words = words.substring(0, i) + "2" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("3-")){
+                    words = words.substring(0, i) + "3" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("4-")){
+                    words = words.substring(0, i) + "4" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("5-")){
+                    words = words.substring(0, i) + "5" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("6-")){
+                    words = words.substring(0, i) + "6" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("7-")){
+                    words = words.substring(0, i) + "7" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("8-")){
+                    words = words.substring(0, i) + "8" + words.substring(i + 2);
+                }
+                if (i+2 <= words.length() && words.substring(i, i + 2).equalsIgnoreCase("9-")){
+                    words = words.substring(0, i) + "9" + words.substring(i + 2);
+                }
+            }
+            System.out.println(words);
+        }
+    }
+}
