@@ -1,0 +1,29 @@
+import java.util.*;
+/**
+ * This program will take a number and output it as a Roman Numeral.
+ *
+ * @author Andrew Grivner
+ * @version 1.0
+ */
+public class RomanNumeral
+{
+    public static void main(String[] args){
+        System.out.println("This program will take a number and output it as a Roman Numeral. ");
+        System.out.println("\nPlease enter a number between 1 and 3999: ");
+        Scanner input = new Scanner(System.in);
+        long number = input.nextLong();
+        int i = 0;
+        String romanNum = "";
+        if (number < 1 || number > 3999){
+            System.out.println("\nInvalid Input");
+        }
+        else{
+            while(i < number){
+                romanNum = romanNum + "I";
+                i++;
+            }
+            romanNum = romanNum.replaceAll("IIIII","V").replaceAll("IIII","IV").replaceAll("VV","X").replaceAll("VIV","IX").replaceAll("XXXXX","L").replaceAll("XXXX","XL").replaceAll("LL","C").replaceAll("LXL","XC").replaceAll("CCCCC","D").replaceAll("CCCC","CD").replaceAll("DD","M").replaceAll("DCD","CM");
+            System.out.println(number+" in Roman Numerals is " + romanNum);
+        }
+    }
+}
