@@ -1,10 +1,4 @@
 import java.util.*;
-/**
- * This program will take a number and output it as a Roman Numeral.
- *
- * @author Andrew Grivner
- * @version 1.0
- */
 public class RomanNumeral
 {
     public static void main(String[] args){
