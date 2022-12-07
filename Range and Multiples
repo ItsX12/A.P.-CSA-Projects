@@ -1,0 +1,19 @@
+import java.util.*;
+public class Buzz{
+    public static void main(String[] args){
+        System.out.println("This will take a range and then print numbers with multiples of another specified number.");
+        System.out.println("\nPlease enter a minimum value for the range: ");
+        Scanner input = new Scanner(System.in);
+        long a = input.nextLong();
+        System.out.println("\nPlease enter a maximum value for the range: ");
+        long b = input.nextLong();
+        System.out.println("\nPlease the number to be used as multiple: ");
+        long n = input.nextLong();
+        System.out.print("\nThe number(s) that fit(s) the requirements are: ");
+        for(long i = a; (a <= i && i <= b); i++){
+            if(i%n==0){
+                System.out.print(i + ", ");
+            }
+        }
+    }
+}
