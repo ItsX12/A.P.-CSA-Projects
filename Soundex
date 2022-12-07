@@ -1,0 +1,66 @@
+import java.util.*;
+public class Soundex {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Scanner again = new Scanner(System.in);
+        String redo = "";
+        do {
+            System.out.println("Enter Text: ");
+            String originalWords = input.nextLine();
+            String words = originalWords;
+            char firstChar = words.charAt(0);
+            int i = 0;
+            // convert words to numbers
+            for (i = 0; i < words.length(); i++) {
+                if (words.substring(i, i + 1).equalsIgnoreCase("a") || words.substring(i, i + 1).equalsIgnoreCase("e")|| words.substring(i, i + 1).equalsIgnoreCase("i")|| words.substring(i, i + 1).equalsIgnoreCase("o")|| words.substring(i, i + 1).equalsIgnoreCase("u")|| words.substring(i, i + 1).equalsIgnoreCase("y")|| words.substring(i, i + 1).equalsIgnoreCase(" ")|| words.substring(i, i + 1).equalsIgnoreCase("h")| words.substring(i, i + 1).equalsIgnoreCase("w")) {
+                    words = words.substring(0, i) + "0" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("b") || words.substring(i, i + 1).equalsIgnoreCase("f")|| words.substring(i, i + 1).equalsIgnoreCase("p")|| words.substring(i, i + 1).equalsIgnoreCase("v")) {
+                    words = words.substring(0, i) + "1" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("c") || words.substring(i, i + 1).equalsIgnoreCase("g")|| words.substring(i, i + 1).equalsIgnoreCase("j")|| words.substring(i, i + 1).equalsIgnoreCase("k")|| words.substring(i, i + 1).equalsIgnoreCase("q")|| words.substring(i, i + 1).equalsIgnoreCase("s")|| words.substring(i, i + 1).equalsIgnoreCase("x")|| words.substring(i, i + 1).equalsIgnoreCase("z")) {
+                    words = words.substring(0, i) + "2" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("d")|| words.substring(i, i + 1).equalsIgnoreCase("t")) {
+                    words = words.substring(0, i) + "3" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("l")) {
+                    words = words.substring(0, i) + "4" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("m")|| words.substring(i, i + 1).equalsIgnoreCase("n")) {
+                    words = words.substring(0, i) + "5" + words.substring(i + 1);
+                }
+                if (words.substring(i, i + 1).equalsIgnoreCase("r")) {
+                    words = words.substring(0, i) + "6" + words.substring(i + 1);
+                }
+            }
+            // removes adjacent numbers
+            for (i = 0; i < words.length(); i++) {
+                if (i > 0 && words.substring(i - 1, i).equals(words.substring(i, i + 1))) {
+                    words = words.substring(0, i) + "" + words.substring(i + 1);
+                    i--;
+                }
+            }
+            // remove first letter
+            words = words.substring(1);
+            // remove zeros
+            System.out.println(words);
+            for (i = 0; i < words.length(); i++) {
+                if (words.substring(i, i + 1).equalsIgnoreCase("0")) {
+                    words = words.substring(0, i) + "" + words.substring(i + 1);
+                    i--;
+                }
+            }
+            System.out.println(words);
+            // add extra if necessary
+            while (words.length() < 3) {
+                words = (words + "0");
+            }
+            // print result
+            words = firstChar + words.substring(0,3);
+            System.out.println(originalWords + " is equal to " + words.toUpperCase() + " using the soundex coding system.");
+            System.out.println("Run again? Yes or No?");
+            redo = again.nextLine();
+        } while (redo.equalsIgnoreCase("Yes") || redo.equalsIgnoreCase("Y"));
+    }
+}
